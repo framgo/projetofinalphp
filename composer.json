@@ -1,0 +1,21 @@
+{
+    "name": "lucas/animeshouse",
+    "description": "Melhor site de Animes que você ja viu",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lucas\\Animeshouse\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "framgo",
+            "email": "lucasaraujooks@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    }
+}

@@ -9,6 +9,7 @@ create or replace table animes(
     genero varchar(250) not null ,
     episodios varchar(250) not null,
     lancamento date not null,
+    zip longtext not null,
     created_at TIMESTAMP not null default CURRENT_TIMESTAMP 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -16,7 +17,8 @@ create or replace table login(
     id int primary key auto_increment,
     email varchar(250) not null unique,
     senha varchar(255) not null,
+    adm int not null,
     created_at TIMESTAMP not null default CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-insert into login(email, senha) values ('animes@gmail.com.br', md5('animes@123'));
+insert into login(email, senha, adm) values ('animes@gmail.com', md5('senha@123'), 1);

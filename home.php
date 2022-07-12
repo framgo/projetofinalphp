@@ -2,7 +2,6 @@
     include('config.php'); 
     
     require_once('repository/AnimesRepository.php');
-    require_once('util/base64.php');
    
     $nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 ?>

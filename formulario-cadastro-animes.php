@@ -12,6 +12,8 @@
   </head>
   <body>
   <?php include('navbar.php'); ?>
+    <?php if($_SESSION['login']->id == 1){
+        ?>
     <div class="col-6 offset-3">
         <fieldset>
             <legend>Cadastro de AnimesHouse</legend>
@@ -62,6 +64,9 @@
             </form>
         </fieldset>
     </div>
+    <?php } else {
+        "";
+    } ?>
     <?php include("rodape.php"); ?>
     <script src="js/base64.js"></script>
   </body>

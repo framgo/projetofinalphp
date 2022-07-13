@@ -27,7 +27,12 @@
                     <th>Episodios</th>
                     <th>Lançamento</th>
                     <th>Data cadastro</th>
+                    <?php if($_SESSION['login']->id == 1){
+                        ?>
                     <th colspan="2">Gerenciar</th>
+                    <?php } else {
+                        "";
+                       } ?>
                 </tr>
             </thead>
             <tbody>
@@ -40,9 +45,14 @@
                     <td><?= $animes->episodios ?></td>
                     <td><?= $animes->lancamento ?></td>
                     <td><?= $animes->created_at ?></td>
-                    <td><a href="#" onclick="gerirAnimes(<?= $animes->id ?>, 'edit');">Editar</td>
-                    <td><a onclick="return confirm('Deseja realmente excluir?') ? gerirAnimes(<?= $animes->id ?>, 'del') : '';" href="#">Excluir</td>
-                </tr>
+                    <?php if($_SESSION['login']->id == 1){
+                        ?>
+                        <td><a href="#" onclick="gerirAnimes(<?= $animes->id ?>, 'edit');">Editar</td>
+                        <td><a onclick="return confirm('Deseja realmente excluir?') ? gerirAnimes(<?= $animes->id ?>, 'del') : '';" href="#">Excluir</td>
+                       <?php } else {
+                        "";
+                       } ?>
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
             <?php if(isset($notificacao)) : ?>
